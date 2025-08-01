@@ -9,7 +9,7 @@
 
 ---
 
-## 📖 Resumo
+## Resumo
 
 Roubos e furtos de veículos emergiram como desafios de segurança pública em centros urbanos. Neste trabalho, analisamos ocorrências de 2021 no Estado de São Paulo (SSP), incorporando dados socioeconômicos do IBGE e investimentos em segurança da SEFAZ. Utilizamos:
 
@@ -23,7 +23,7 @@ Palavras-chave: Segurança pública · Roubos e furtos · Atividade econômica �
 
 ---
 
-## 🗂️ Estrutura do Repositório
+## Estrutura do Repositório
 
 ```text
 ├── data/                    # Dados brutos (.csv) e pré-processados (dataframes)
@@ -41,7 +41,7 @@ Palavras-chave: Segurança pública · Roubos e furtos · Atividade econômica �
 
 ---
 
-## 🚀 Como Executar
+## Como Executar
 
 1. **Clonar o repositório**:
    ```bash
@@ -66,7 +66,7 @@ Palavras-chave: Segurança pública · Roubos e furtos · Atividade econômica �
 
 ---
 
-## 🔧 Metodologia (Resumo)
+## Metodologia (Resumo)
 
 1. **Coleta e Pré-processamento**
 2. **Análise Exploratória (EDA)**
@@ -75,7 +75,7 @@ Palavras-chave: Segurança pública · Roubos e furtos · Atividade econômica �
 5. **K-Means**
 ---
 
-## 📊 Principais Resultados
+## Principais Resultados
 - **Spearman (HORA×OCORRÊNCIAS):** ρ = 0,7965, p = 0,0032 – forte associação.
 - **ANACOR:** χ² = 398,48; p < 0,001 – pico de furtos na madrugada de fins de semana.
 - **Clusters (K=4):**  
@@ -85,7 +85,7 @@ Palavras-chave: Segurança pública · Roubos e furtos · Atividade econômica �
 
 ---
 
-## 📚 Referências Selecionadas
+## Referências
 - Cohen, J. (1988). *Statistical Power Analysis for the Behavioral Sciences.*
 - Greenacre, M. J. (2017). *Correspondence Analysis in Practice.*
 - Géron, A. (2021). *Hands-On Machine Learning with Scikit-Learn, Keras & TensorFlow.*
@@ -93,5 +93,5 @@ Palavras-chave: Segurança pública · Roubos e furtos · Atividade econômica �
 
 ---
 
-## 🤝 Contato
+## Contato
 Para dúvidas, sugestões ou colaborações, abra uma issue ou envie e-mail para **macrobonillo@gmail.com**.
