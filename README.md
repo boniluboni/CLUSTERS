@@ -1,12 +1,4 @@
 # Implementação de Clusterização na Detecção de Padrões em Roubos e Furtos de Veículos
-
-
-
-¹ Aluno do curso em Data Science e Analytics do MBA USP/Esalq  
-² Alvarez. Head in R&D and Customer Experience. Av. Ayrton Senna da Silva, 600 – Sala 602 – Gleba Fazenda Palhano; 86050-460. Londrina, Paraná, Brasil  
-
-*Autor correspondente: macrobonillo@gmail.com*
-
 ---
 
 ## Resumo
