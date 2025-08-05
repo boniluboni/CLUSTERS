@@ -230,4 +230,4 @@ cd analise-roubos-furtos-sp</code></pre>
 </div>
 
 ---
-<p align="center"><strong>Desenvolvido com ❤️ para análise de segurança pública</strong></p>
+<p align="center"><strong>---</strong></p>
