@@ -1,190 +1,257 @@
-Análise de Padrões em Roubos e Furtos de Veículos no Estado de São Paulo
-Visão Geral do Projeto
-Este projeto implementa técnicas avançadas de análise de dados e machine learning para identificar padrões em ocorrências de roubos e furtos de veículos no Estado de São Paulo. A análise integra dados de segurança pública com variáveis socioeconômicas e demográficas, oferecendo insights valiosos para o direcionamento estratégico de políticas públicas e alocação de recursos de segurança.
-Objetivos
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Análise de Padrões em Roubos e Furtos de Veículos SP</title>
+  <style>
+    body { font-family: Arial, sans-serif; line-height: 1.6; margin: 20px; }
+    h1, h2, h3, h4 { color: #2c3e50; }
+    nav ul { list-style: none; padding: 0; }
+    nav ul li { margin: 5px 0; }
+    table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
+    table, th, td { border: 1px solid #ddd; }
+    th, td { padding: 8px; text-align: left; }
+    th { background-color: #f4f4f4; }
+  </style>
+</head>
+<body>
 
-Identificar padrões temporais e geográficos em roubos e furtos de veículos
-Segmentar municípios com base em características socioeconômicas e criminais
-Fornecer evidências estatísticas para apoiar decisões estratégicas em segurança pública
-Demonstrar a eficácia de algoritmos de clustering na análise criminal
+  <h1>Análise de Padrões em Roubos e Furtos de Veículos no Estado de São Paulo</h1>
 
-Metodologia e Técnicas Aplicadas
-1. Análise Exploratória de Dados (EDA)
+  <section id="visao-geral">
+    <h2>Visão Geral do Projeto</h2>
+    <p>Este projeto implementa técnicas avançadas de análise de dados e machine learning para identificar padrões em ocorrências de roubos e furtos de veículos no Estado de São Paulo. A análise integra dados de segurança pública com variáveis socioeconômicas e demográficas, oferecendo insights valiosos para o direcionamento estratégico de políticas públicas e alocação de recursos de segurança.</p>
+  </section>
 
-Visualização de distribuições temporais (hora, dia da semana, período do dia)
-Análise geográfica por sub-regiões do estado
-Identificação de padrões e formulação de hipóteses
-Criação de heatmaps e gráficos de cascata para variações percentuais
+  <nav>
+    <h2>Índice</h2>
+    <ul>
+      <li><a href="#objetivos">Objetivos</a></li>
+      <li><a href="#metodologia">Metodologia e Técnicas Aplicadas</a>
+        <ul>
+          <li><a href="#eda">Análise Exploratória de Dados (EDA)</a></li>
+          <li><a href="#testes-hipoteses">Testes de Hipóteses e Correlação</a></li>
+          <li><a href="#anacor">Análise de Correspondência Simples (ANACOR)</a></li>
+          <li><a href="#pca">Análise de Componentes Principais (PCA)</a></li>
+          <li><a href="#kmeans">Clustering com K-Means</a></li>
+        </ul>
+      </li>
+      <li><a href="#descobertas">Principais Descobertas</a>
+        <ul>
+          <li><a href="#temporais">Padrões Temporais</a></li>
+          <li><a href="#segmentation">Segmentação Municipal</a></li>
+          <li><a href="#insights-socioeconomicos">Insights Socioeconômicos</a></li>
+        </ul>
+      </li>
+      <li><a href="#tecnologias">Tecnologias Utilizadas</a></li>
+      <li><a href="#estrutura">Estrutura do Projeto</a></li>
+      <li><a href="#como-executar">Como Executar</a></li>
+      <li><a href="#fontes">Conjunto de Dados e Fontes</a></li>
+      <li><a href="#variaveis">Variáveis Principais</a></li>
+      <li><a href="#aplicacoes">Aplicações Práticas</a></li>
+      <li><a href="#referencias">Referências Principais</a></li>
+      <li><a href="#contribuicoes">Contribuições</a></li>
+    </ul>
+  </nav>
 
-2. Testes de Hipóteses e Correlação
-Correlação de Spearman: Análise da associação entre horário e quantidade de ocorrências
+  <section id="objetivos">
+    <h2>Objetivos</h2>
+    <ul>
+      <li>Identificar padrões temporais e geográficos em roubos e furtos de veículos</li>
+      <li>Segmentar municípios com base em características socioeconômicas e criminais</li>
+      <li>Fornecer evidências estatísticas para apoiar decisões estratégicas em segurança pública</li>
+      <li>Demonstrar a eficácia de algoritmos de clustering na análise criminal</li>
+    </ul>
+  </section>
 
-Resultado: ρ = 0,7965 (p-valor = 0,0032)
-Forte correlação positiva confirmada estatisticamente
+  <section id="metodologia">
+    <h2>Metodologia e Técnicas Aplicadas</h2>
 
-3. Análise de Correspondência Simples (ANACOR)
+    <h3 id="eda">Análise Exploratória de Dados (EDA)</h3>
+    <ul>
+      <li>Visualização de distribuições temporais (hora, dia da semana, período do dia)</li>
+      <li>Análise geográfica por sub-regiões do estado</li>
+      <li>Identificação de padrões e formulação de hipóteses</li>
+      <li>Criação de heatmaps e gráficos de cascata para variações percentuais</li>
+    </ul>
 
-Investigação da relação entre dias da semana e períodos do dia
-Teste qui-quadrado: χ² = 398,48 (p < 0,001)
-Identificação de padrões: maior incidência nas madrugadas de fim de semana
+    <h3 id="testes-hipoteses">Testes de Hipóteses e Correlação</h3>
+    <ul>
+      <li>Correlação de Spearman: Análise da associação entre horário e quantidade de ocorrências</li>
+      <li>Resultado: ρ = 0,7965 (p-valor = 0,0032) – Forte correlação positiva confirmada estatisticamente</li>
+    </ul>
 
-4. Análise de Componentes Principais (PCA)
+    <h3 id="anacor">Análise de Correspondência Simples (ANACOR)</h3>
+    <ul>
+      <li>Investigação da relação entre dias da semana e períodos do dia</li>
+      <li>Teste qui-quadrado: χ² = 398,48 (p &lt; 0,001)</li>
+      <li>Identificação de padrões: maior incidência nas madrugadas de fim de semana</li>
+    </ul>
 
-Redução de dimensionalidade preservando 91,09% da variância
-Otimização para visualização e melhoria do desempenho do clustering
-Facilitação da interpretação dos agrupamentos
+    <h3 id="pca">Análise de Componentes Principais (PCA)</h3>
+    <ul>
+      <li>Redução de dimensionalidade preservando 91,09% da variância</li>
+      <li>Otimização para visualização e melhoria do desempenho do clustering</li>
+      <li>Facilitação da interpretação dos agrupamentos</li>
+    </ul>
 
-5. Clustering com K-Means
+    <h3 id="kmeans">Clustering com K-Means</h3>
+    <ul>
+      <li>Determinação do número ótimo de clusters: método do cotovelo (K=4)</li>
+      <li>Segmentação de 645 municípios paulistas</li>
+      <li>Avaliação com coeficiente de silhueta: 0,80</li>
+      <li>Análise detalhada de cada cluster com estatísticas descritivas</li>
+    </ul>
+  </section>
 
-Determinação do número ótimo de clusters: método do cotovelo (K=4)
-Segmentação de 645 municípios paulistas
-Avaliação com coeficiente de silhueta: 0,80
-Análise detalhada de cada cluster com estatísticas descritivas
+  <section id="descobertas">
+    <h2>Principais Descobertas</h2>
 
-Principais Descobertas
-Padrões Temporais
-<table>
-<tr>
-<td><strong>Horário de pico</strong></td>
-<td>19h às 21h (concentração de 50% das ocorrências no período noturno)</td>
-</tr>
-<tr>
-<td><strong>Dias críticos</strong></td>
-<td>Sextas-feiras (noite) e fins de semana (madrugada)</td>
-</tr>
-<tr>
-<td><strong>Correlação horária</strong></td>
-<td>Aumento progressivo de ocorrências ao longo do dia</td>
-</tr>
-</table>
-Segmentação Municipal (4 Clusters)
-<table>
-<tr>
-<th>Cluster</th>
-<th>Características</th>
-</tr>
-<tr>
-<td><strong>Cluster 0</strong></td>
-<td>Municípios menores com baixa criminalidade e alta variabilidade</td>
-</tr>
-<tr>
-<td><strong>Cluster 1</strong></td>
-<td>Centros urbanos densos com alta atividade econômica</td>
-</tr>
-<tr>
-<td><strong>Cluster 2</strong></td>
-<td>Cidades de médio porte com altas taxas de roubo/furto</td>
-</tr>
-<tr>
-<td><strong>Cluster 3</strong></td>
-<td>Regiões extensas com densidade populacional moderada</td>
-</tr>
-</table>
-Insights Socioeconômicos
+    <h3 id="temporais">Padrões Temporais</h3>
+    <table>
+      <tr><th>Aspecto</th><th>Descrição</th></tr>
+      <tr><td>Horário de pico</td><td>19h às 21h (concentração de 50% das ocorrências no período noturno)</td></tr>
+      <tr><td>Dias críticos</td><td>Sextas-feiras (noite) e fins de semana (madrugada)</td></tr>
+      <tr><td>Correlação horária</td><td>Aumento progressivo de ocorrências ao longo do dia</td></tr>
+    </table>
 
-Correlação entre PIB per capita elevado e maiores taxas de criminalidade
-Disparidade nos investimentos em segurança entre municípios
-Relação entre densidade demográfica e incidência de crimes
+    <h3 id="segmentation">Segmentação Municipal (4 Clusters)</h3>
+    <table>
+      <tr><th>Cluster</th><th>Características</th></tr>
+      <tr><td>Cluster 0</td><td>Municípios menores com baixa criminalidade e alta variabilidade</td></tr>
+      <tr><td>Cluster 1</td><td>Centros urbanos densos com alta atividade econômica</td></tr>
+      <tr><td>Cluster 2</td><td>Cidades de médio porte com altas taxas de roubo/furto</td></tr>
+      <tr><td>Cluster 3</td><td>Regiões extensas com densidade populacional moderada</td></tr>
+    </table>
 
-Tecnologias Utilizadas
-Python 3.11.4
-Bibliotecas principais:
+    <h3 id="insights-socioeconomicos">Insights Socioeconômicos</h3>
+    <ul>
+      <li>Correlação entre PIB per capita elevado e maiores taxas de criminalidade</li>
+      <li>Disparidade nos investimentos em segurança entre municípios</li>
+      <li>Relação entre densidade demográfica e incidência de crimes</li>
+    </ul>
+  </section>
 
-pandas - Manipulação e análise de dados
-scikit-learn - K-Means, PCA, métricas de avaliação
-scipy - Testes estatísticos e correlações
-prince - Análise de correspondência (ANACOR)
-seaborn e matplotlib - Visualizações
-yellowbrick - Método do cotovelo
-numpy - Operações numéricas
+  <section id="tecnologias">
+    <h2>Tecnologias Utilizadas</h2>
+    <p><strong>Python 3.11.4</strong></p>
+    <ul>
+      <li><code>pandas</code> - Manipulação e análise de dados</li>
+      <li><code>scikit-learn</code> - K-Means, PCA, métricas de avaliação</li>
+      <li><code>scipy</code> - Testes estatísticos e correlações</li>
+      <li><code>prince</code> - Análise de correspondência (ANACOR)</li>
+      <li><code>seaborn</code> e <code>matplotlib</code> - Visualizações</li>
+      <li><code>yellowbrick</code> - Método do cotovelo</li>
+      <li><code>numpy</code> - Operações numéricas</li>
+    </ul>
+  </section>
 
-Estrutura do Projeto
-<pre>
-<strong>analise-roubos-veiculos-sp/</strong>
+  <section id="estrutura">
+    <h2>Estrutura do Projeto</h2>
+    <pre>
+analise-roubos-veiculos-sp/
 │
-├── <strong>data/</strong>
-│   ├── <strong>raw/</strong>                        <em># Dados originais (SSP, IBGE, SEFAZ)</em>
+├── data/
+│   ├── raw/                        # Dados originais (SSP, IBGE, SEFAZ)
 │   │   ├── ocorrencias_2021.csv
 │   │   ├── dados_ibge.csv
 │   │   └── investimentos_sefaz.csv
-│   └── <strong>processed/</strong>                  <em># Dados processados e integrados</em>
+│   └── processed/                  # Dados processados e integrados
 │       └── dataset_final.csv
 │
-├── <strong>notebooks/</strong>
-│   ├── 01_preprocessing.ipynb      <em># Limpeza e integração dos dados</em>
-│   ├── 02_eda.ipynb               <em># Análise exploratória completa</em>
-│   ├── 03_statistical_tests.ipynb  <em># Spearman e ANACOR</em>
-│   ├── 04_pca_analysis.ipynb      <em># Redução de dimensionalidade</em>
-│   └── 05_clustering.ipynb        <em># K-Means e análise dos clusters</em>
+├── notebooks/
+│   ├── 01_preprocessing.ipynb      # Limpeza e integração dos dados
+│   ├── 02_eda.ipynb               # Análise exploratória completa
+│   ├── 03_statistical_tests.ipynb  # Spearman e ANACOR
+│   ├── 04_pca_analysis.ipynb      # Redução de dimensionalidade
+│   └── 05_clustering.ipynb        # K-Means e análise dos clusters
 │
-├── <strong>src/</strong>
-│   ├── data_processing.py         <em># Funções de pré-processamento</em>
-│   ├── statistical_analysis.py    <em># Implementação dos testes</em>
-│   ├── clustering.py              <em># Pipeline do K-Means</em>
-│   └── visualization.py           <em># Funções de visualização</em>
+├── src/
+│   ├── data_processing.py         # Funções de pré-processamento
+│   ├── statistical_analysis.py    # Implementação dos testes
+│   ├── clustering.py              # Pipeline do K-Means
+│   └── visualization.py           # Funções de visualização
 │
-├── <strong>results/</strong>
-│   ├── <strong>figures/</strong>                   <em># Gráficos e visualizações</em>
-│   └── <strong>reports/</strong>                   <em># Relatórios detalhados</em>
+├── results/
+│   ├── figures/                   # Gráficos e visualizações
+│   └── reports/                   # Relatórios detalhados
 │
-├── requirements.txt               <em># Dependências do projeto</em>
-├── README.md                      <em># Este arquivo</em>
-└── LICENSE                        <em># MIT License</em>
-</pre>
-Como Executar
-1. Clone o repositório
-bashgit clone https://github.com/SEU_USUARIO/analise-roubos-veiculos-sp.git
-cd analise-roubos-veiculos-sp
-2. Configure o ambiente virtual
-bashpython -m venv venv
-source venv/bin/activate  # Linux/macOS
-venv\Scripts\activate     # Windows
-3. Instale as dependências
-bashpip install -r requirements.txt
-4. Execute os notebooks na ordem
-bashjupyter lab
-Conjunto de Dados
-Fontes
-<table>
-<tr>
-<th>Fonte</th>
-<th>Descrição</th>
-</tr>
-<tr>
-<td><strong>SSP-SP</strong></td>
-<td>172.000 registros de ocorrências (filtrados para 10.777 após pré-processamento)</td>
-</tr>
-<tr>
-<td><strong>IBGE</strong></td>
-<td>Dados demográficos e socioeconômicos dos 645 municípios</td>
-</tr>
-<tr>
-<td><strong>SEFAZ-SP</strong></td>
-<td>Investimentos em segurança pública por município</td>
-</tr>
-</table>
-Variáveis Principais
+├── requirements.txt               # Dependências do projeto
+├── README.md                      # Este arquivo
+└── LICENSE                        # MIT License
+    </pre>
+  </section>
 
-Temporais: data, hora, dia da semana, período do dia
-Geográficas: cidade, região, coordenadas
-Socioeconômicas: população, PIB per capita, renda média
-Segurança: investimentos, taxa de roubos por 1000 veículos
-Mobilidade: frota de automóveis, taxa de veículos por pessoa
+  <section id="como-executar">
+    <h2>Como Executar</h2>
+    <ol>
+      <li>Clone o repositório:
+        <pre><code>git clone https://github.com/SEU_USUARIO/analise-roubos-veiculos-sp.git
+cd analise-roubos-veiculos-sp</code></pre>
+      </li>
+      <li>Configure o ambiente virtual:
+        <pre><code>python -m venv venv
+# Linux/macOS
+source venv/bin/activate
+# Windows
+venv\Scripts\activate</code></pre>
+      </li>
+      <li>Instale as dependências:
+        <pre><code>pip install -r requirements.txt</code></pre>
+      </li>
+      <li>Execute os notebooks na ordem:
+        <pre><code>jupyter lab</code></pre>
+      </li>
+    </ol>
+  </section>
 
-Aplicações Práticas
+  <section id="fontes">
+    <h2>Conjunto de Dados e Fontes</h2>
+    <table>
+      <tr><th>Fonte</th><th>Descrição</th></tr>
+      <tr><td>SSP-SP</td><td>172.000 registros de ocorrências (filtrados para 10.777 após pré-processamento)</td></tr>
+      <tr><td>IBGE</td><td>Dados demográficos e socioeconômicos dos 645 municípios</td></tr>
+      <tr><td>SEFAZ-SP</td><td>Investimentos em segurança pública por município</td></tr>
+    </table>
+  </section>
 
-Alocação de recursos - Direcionamento estratégico de efetivo policial
-Políticas públicas - Evidências para tomada de decisão
-Planejamento urbano - Identificação de áreas críticas
-Gestão de segurança - Otimização de investimentos por região
+  <section id="variaveis">
+    <h2>Variáveis Principais</h2>
+    <ul>
+      <li><strong>Temporais:</strong> data, hora, dia da semana, período do dia</li>
+      <li><strong>Geográficas:</strong> cidade, região, coordenadas</li>
+      <li><strong>Socioeconômicas:</strong> população, PIB per capita, renda média</li>
+      <li><strong>Segurança:</strong> investimentos, taxa de roubos por 1000 veículos</li>
+      <li><strong>Mobilidade:</strong> frota de automóveis, taxa de veículos por pessoa</li>
+    </ul>
+  </section>
 
-Referências Principais
+  <section id="aplicacoes">
+    <h2>Aplicações Práticas</h2>
+    <ul>
+      <li>Alocação de recursos - Direcionamento estratégico de efetivo policial</li>
+      <li>Políticas públicas - Evidências para tomada de decisão</li>
+      <li>Planejamento urbano - Identificação de áreas críticas</li>
+      <li>Gestão de segurança - Otimização de investimentos por região</li>
+    </ul>
+  </section>
 
-Cohen, J. (1988). Statistical Power Analysis for the Behavioral Sciences
-Greenacre, M. J. (2017). Correspondence Analysis in Practice
-Géron, A. (2021). Hands-On Machine Learning with Scikit-Learn, Keras & TensorFlow
-Everitt, B. S. et al. (2011). Cluster Analysis
+  <section id="referencias">
+    <h2>Referências Principais</h2>
+    <ul>
+      <li>Cohen, J. (1988). <em>Statistical Power Analysis for the Behavioral Sciences</em></li>
+      <li>Greenacre, M. J. (2017). <em>Correspondence Analysis in Practice</em></li>
+      <li>Géron, A. (2021). <em>Hands-On Machine Learning with Scikit-Learn, Keras & TensorFlow</em></li>
+      <li>Everitt, B. S. et al. (2011). <em>Cluster Analysis</em></li>
+    </ul>
+  </section>
 
-Contribuições
-Contribuições são bem-vindas! Por favor, abra uma issue para discutir mudanças propostas ou envie um pull request.
-Contato
+  <section id="contribuicoes">
+    <h2>Contribuições</h2>
+    <p>Contribuições são bem-vindas! Por favor, abra uma issue para discutir mudanças propostas ou envie um pull request.</p>
+    <p><strong>Contato:</strong> [seu.email@exemplo.com]</p>
+  </section>
+
+</body>
+</html>
