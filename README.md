@@ -68,41 +68,51 @@
   <section id="metodologia">
     <h2>Metodologia e Técnicas Aplicadas</h2>
 
-    <h3 id="eda">Análise Exploratória de Dados (EDA)</h3>
-    <ul>
-      <li>Visualização de distribuições temporais (hora, dia da semana, período do dia)</li>
-      <li>Análise geográfica por sub-regiões do estado</li>
-      <li>Identificação de padrões e formulação de hipóteses</li>
-      <li>Criação de heatmaps e gráficos de cascata para variações percentuais</li>
-    </ul>
+    <section id="eda">
+      <h3>Análise Exploratória de Dados (EDA)</h3>
+      <ul>
+        <li>Visualização de distribuições temporais (hora, dia da semana, período do dia)</li>
+        <li>Análise geográfica por sub-regiões do estado</li>
+        <li>Identificação de padrões e formulação de hipóteses</li>
+        <li>Criação de heatmaps e gráficos de cascata para variações percentuais</li>
+      </ul>
+    </section>
 
-    <h3 id="testes-hipoteses">Testes de Hipóteses e Correlação</h3>
-    <ul>
-      <li>Correlação de Spearman: Análise da associação entre horário e quantidade de ocorrências</li>
-      <li>Resultado: ρ = 0,7965 (p-valor = 0,0032) – Forte correlação positiva confirmada estatisticamente</li>
-    </ul>
+    <section id="testes-hipoteses">
+      <h3>Testes de Hipóteses e Correlação</h3>
+      <ul>
+        <li>Correlação de Spearman: Análise da associação entre horário e quantidade de ocorrências</li>
+        <li>Resultado: ρ = 0,7965 (p-valor = 0,0032) – Forte correlação positiva confirmada estatisticamente</li>
+      </ul>
+    </section>
 
-    <h3 id="anacor">Análise de Correspondência Simples (ANACOR)</h3>
-    <ul>
-      <li>Investigação da relação entre dias da semana e períodos do dia</li>
-      <li>Teste qui-quadrado: χ² = 398,48 (p &lt; 0,001)</li>
-      <li>Identificação de padrões: maior incidência nas madrugadas de fim de semana</li>
-    </ul>
+    <section id="anacor">
+      <h3>Análise de Correspondência Simples (ANACOR)</h3>
+      <ul>
+        <li>Investigação da relação entre dias da semana e períodos do dia</li>
+        <li>Teste qui-quadrado: χ² = 398,48 (p &lt; 0,001)</li>
+        <li>Identificação de padrões: maior incidência nas madrugadas de fim de semana</li>
+      </ul>
+    </section>
 
-    <h3 id="pca">Análise de Componentes Principais (PCA)</h3>
-    <ul>
-      <li>Redução de dimensionalidade preservando 91,09% da variância</li>
-      <li>Otimização para visualização e melhoria do desempenho do clustering</li>
-      <li>Facilitação da interpretação dos agrupamentos</li>
-    </ul>
+    <section id="pca">
+      <h3>Análise de Componentes Principais (PCA)</h3>
+      <ul>
+        <li>Redução de dimensionalidade preservando 91,09% da variância</li>
+        <li>Otimização para visualização e melhoria do desempenho do clustering</li>
+        <li>Facilitação da interpretação dos agrupamentos</li>
+      </ul>
+    </section>
 
-    <h3 id="kmeans">Clustering com K-Means</h3>
-    <ul>
-      <li>Determinação do número ótimo de clusters: método do cotovelo (K=4)</li>
-      <li>Segmentação de 645 municípios paulistas</li>
-      <li>Avaliação com coeficiente de silhueta: 0,80</li>
-      <li>Análise detalhada de cada cluster com estatísticas descritivas</li>
-    </ul>
+    <section id="kmeans">
+      <h3>Clustering com K-Means</h3>
+      <ul>
+        <li>Determinação do número ótimo de clusters: método do cotovelo (K=4)</li>
+        <li>Segmentação de 645 municípios paulistas</li>
+        <li>Avaliação com coeficiente de silhueta: 0,80</li>
+        <li>Análise detalhada de cada cluster com estatísticas descritivas</li>
+      </ul>
+    </section>
   </section>
 
   <section id="descobertas">
