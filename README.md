@@ -108,29 +108,35 @@
   <section id="descobertas">
     <h2>Principais Descobertas</h2>
 
-    <h3 id="temporais">Padrões Temporais</h3>
-    <table>
-      <tr><th>Aspecto</th><th>Descrição</th></tr>
-      <tr><td>Horário de pico</td><td>19h às 21h (concentração de 50% das ocorrências no período noturno)</td></tr>
-      <tr><td>Dias críticos</td><td>Sextas-feiras (noite) e fins de semana (madrugada)</td></tr>
-      <tr><td>Correlação horária</td><td>Aumento progressivo de ocorrências ao longo do dia</td></tr>
-    </table>
+    <section id="temporais">
+      <h3>Padrões Temporais</h3>
+      <table>
+        <tr><th>Aspecto</th><th>Descrição</th></tr>
+        <tr><td>Horário de pico</td><td>19h às 21h (concentração de 50% das ocorrências no período noturno)</td></tr>
+        <tr><td>Dias críticos</td><td>Sextas-feiras (noite) e fins de semana (madrugada)</td></tr>
+        <tr><td>Correlação horária</td><td>Aumento progressivo de ocorrências ao longo do dia</td></tr>
+      </table>
+    </section>
 
-    <h3 id="segmentation">Segmentação Municipal (4 Clusters)</h3>
-    <table>
-      <tr><th>Cluster</th><th>Características</th></tr>
-      <tr><td>Cluster 0</td><td>Municípios menores com baixa criminalidade e alta variabilidade</td></tr>
-      <tr><td>Cluster 1</td><td>Centros urbanos densos com alta atividade econômica</td></tr>
-      <tr><td>Cluster 2</td><td>Cidades de médio porte com altas taxas de roubo/furto</td></tr>
-      <tr><td>Cluster 3</td><td>Regiões extensas com densidade populacional moderada</td></tr>
-    </table>
+    <section id="segmentation">
+      <h3>Segmentação Municipal (4 Clusters)</h3>
+      <table>
+        <tr><th>Cluster</th><th>Características</th></tr>
+        <tr><td>Cluster 0</td><td>Municípios menores com baixa criminalidade e alta variabilidade</td></tr>
+        <tr><td>Cluster 1</td><td>Centros urbanos densos com alta atividade econômica</td></tr>
+        <tr><td>Cluster 2</td><td>Cidades de médio porte com altas taxas de roubo/furto</td></tr>
+        <tr><td>Cluster 3</td><td>Regiões extensas com densidade populacional moderada</td></tr>
+      </table>
+    </section>
 
-    <h3 id="insights-socioeconomicos">Insights Socioeconômicos</h3>
-    <ul>
-      <li>Correlação entre PIB per capita elevado e maiores taxas de criminalidade</li>
-      <li>Disparidade nos investimentos em segurança entre municípios</li>
-      <li>Relação entre densidade demográfica e incidência de crimes</li>
-    </ul>
+    <section id="insights-socioeconomicos">
+      <h3>Insights Socioeconômicos</h3>
+      <ul>
+        <li>Correlação entre PIB per capita elevado e maiores taxas de criminalidade</li>
+        <li>Disparidade nos investimentos em segurança entre municípios</li>
+        <li>Relação entre densidade demográfica e incidência de crimes</li>
+      </ul>
+    </section>
   </section>
 
   <section id="tecnologias">
