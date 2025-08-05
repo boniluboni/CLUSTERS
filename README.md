@@ -1,7 +1,6 @@
 Análise de Padrões em Roubos e Furtos de Veículos no Estado de São Paulo
 Visão Geral do Projeto
 Este projeto implementa técnicas avançadas de análise de dados e machine learning para identificar padrões em ocorrências de roubos e furtos de veículos no Estado de São Paulo. A análise integra dados de segurança pública com variáveis socioeconômicas e demográficas, oferecendo insights valiosos para o direcionamento estratégico de políticas públicas e alocação de recursos de segurança.
-
 Objetivos
 
 Identificar padrões temporais e geográficos em roubos e furtos de veículos
@@ -18,13 +17,10 @@ Identificação de padrões e formulação de hipóteses
 Criação de heatmaps e gráficos de cascata para variações percentuais
 
 2. Testes de Hipóteses e Correlação
-
 Correlação de Spearman: Análise da associação entre horário e quantidade de ocorrências
 
 Resultado: ρ = 0,7965 (p-valor = 0,0032)
 Forte correlação positiva confirmada estatisticamente
-
-
 
 3. Análise de Correspondência Simples (ANACOR)
 
@@ -66,7 +62,6 @@ Disparidade nos investimentos em segurança entre municípios
 Relação entre densidade demográfica e incidência de crimes
 
 Tecnologias Utilizadas
-
 Python 3.11.4
 Bibliotecas principais:
 
@@ -74,13 +69,11 @@ pandas: Manipulação e análise de dados
 scikit-learn: K-Means, PCA, métricas de avaliação
 scipy: Testes estatísticos e correlações
 prince: Análise de correspondência (ANACOR)
-seaborn & matplotlib: Visualizações
+seaborn e matplotlib: Visualizações
 yellowbrick: Método do cotovelo
 numpy: Operações numéricas
 
 
-
-Estrutura do Projeto
 ├── data/
 │   ├── raw/                    # Dados originais (SSP, IBGE, SEFAZ)
 │   │   ├── ocorrencias_2021.csv
@@ -109,52 +102,3 @@ Estrutura do Projeto
 ├── requirements.txt           # Dependências do projeto
 ├── README.md                  # Este arquivo
 └── LICENSE                    # MIT License
-
-Como Executar
-1. Clone o repositório
-bashgit clone https://github.com/SEU_USUARIO/analise-roubos-veiculos-sp.git
-cd analise-roubos-veiculos-sp
-2. Configure o ambiente virtual
-bashpython -m venv venv
-source venv/bin/activate  # Linux/macOS
-venv\Scripts\activate     # Windows
-3. Instale as dependências
-bashpip install -r requirements.txt
-4. Execute os notebooks na ordem
-bashjupyter lab
-📊 Conjunto de Dados
-Fontes
-
-SSP-SP: 172.000 registros de ocorrências (filtrados para 10.777 após pré-processamento)
-IBGE: Dados demográficos e socioeconômicos dos 645 municípios
-SEFAZ-SP: Investimentos em segurança pública por município
-
-Variáveis Principais
-
-Temporais: data, hora, dia da semana, período do dia
-Geográficas: cidade, região, coordenadas
-Socioeconômicas: população, PIB per capita, renda média
-Segurança: investimentos, taxa de roubos por 1000 veículos
-Mobilidade: frota de automóveis, taxa de veículos por pessoa
-
-Aplicações Práticas
-
-Alocação de recursos: Direcionamento estratégico de efetivo policial
-Políticas públicas: Evidências para tomada de decisão
-Planejamento urbano: Identificação de áreas críticas
-Gestão de segurança: Otimização de investimentos por região
-
-Referências Principais
-
-Cohen, J. (1988). Statistical Power Analysis for the Behavioral Sciences
-Greenacre, M. J. (2017). Correspondence Analysis in Practice
-Géron, A. (2021). Hands-On Machine Learning with Scikit-Learn, Keras & TensorFlow
-Everitt, B. S. et al. (2011). Cluster Analysis
-
-Contribuições
-Contribuições são bem-vindas! Por favor, abra uma issue para discutir mudanças propostas ou envie um pull request.
-
-
-<p align="center">
-  <i>Desenvolvido com o objetivo de contribuir para a segurança pública através da ciência de dados</i>
-</p>
