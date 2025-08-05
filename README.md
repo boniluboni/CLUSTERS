@@ -98,34 +98,93 @@ seaborn e matplotlib - Visualizações
 yellowbrick - Método do cotovelo
 numpy - Operações numéricas
 
-
-analise-roubos-veiculos-sp/
+Estrutura do Projeto
+<pre>
+<strong>analise-roubos-veiculos-sp/</strong>
 │
-├── data/
-│   ├── raw/                        # Dados originais (SSP, IBGE, SEFAZ)
+├── <strong>data/</strong>
+│   ├── <strong>raw/</strong>                        <em># Dados originais (SSP, IBGE, SEFAZ)</em>
 │   │   ├── ocorrencias_2021.csv
 │   │   ├── dados_ibge.csv
 │   │   └── investimentos_sefaz.csv
-│   └── processed/                  # Dados processados e integrados
+│   └── <strong>processed/</strong>                  <em># Dados processados e integrados</em>
 │       └── dataset_final.csv
 │
-├── notebooks/
-│   ├── 01_preprocessing.ipynb      # Limpeza e integração dos dados
-│   ├── 02_eda.ipynb               # Análise exploratória completa
-│   ├── 03_statistical_tests.ipynb  # Spearman e ANACOR
-│   ├── 04_pca_analysis.ipynb      # Redução de dimensionalidade
-│   └── 05_clustering.ipynb        # K-Means e análise dos clusters
+├── <strong>notebooks/</strong>
+│   ├── 01_preprocessing.ipynb      <em># Limpeza e integração dos dados</em>
+│   ├── 02_eda.ipynb               <em># Análise exploratória completa</em>
+│   ├── 03_statistical_tests.ipynb  <em># Spearman e ANACOR</em>
+│   ├── 04_pca_analysis.ipynb      <em># Redução de dimensionalidade</em>
+│   └── 05_clustering.ipynb        <em># K-Means e análise dos clusters</em>
 │
-├── src/
-│   ├── data_processing.py         # Funções de pré-processamento
-│   ├── statistical_analysis.py    # Implementação dos testes
-│   ├── clustering.py              # Pipeline do K-Means
-│   └── visualization.py           # Funções de visualização
+├── <strong>src/</strong>
+│   ├── data_processing.py         <em># Funções de pré-processamento</em>
+│   ├── statistical_analysis.py    <em># Implementação dos testes</em>
+│   ├── clustering.py              <em># Pipeline do K-Means</em>
+│   └── visualization.py           <em># Funções de visualização</em>
 │
-├── results/
-│   ├── figures/                   # Gráficos e visualizações
-│   └── reports/                   # Relatórios detalhados
+├── <strong>results/</strong>
+│   ├── <strong>figures/</strong>                   <em># Gráficos e visualizações</em>
+│   └── <strong>reports/</strong>                   <em># Relatórios detalhados</em>
 │
-├── requirements.txt               # Dependências do projeto
-├── README.md                      # Este arquivo
-└── LICENSE                        # MIT License
+├── requirements.txt               <em># Dependências do projeto</em>
+├── README.md                      <em># Este arquivo</em>
+└── LICENSE                        <em># MIT License</em>
+</pre>
+Como Executar
+1. Clone o repositório
+bashgit clone https://github.com/SEU_USUARIO/analise-roubos-veiculos-sp.git
+cd analise-roubos-veiculos-sp
+2. Configure o ambiente virtual
+bashpython -m venv venv
+source venv/bin/activate  # Linux/macOS
+venv\Scripts\activate     # Windows
+3. Instale as dependências
+bashpip install -r requirements.txt
+4. Execute os notebooks na ordem
+bashjupyter lab
+Conjunto de Dados
+Fontes
+<table>
+<tr>
+<th>Fonte</th>
+<th>Descrição</th>
+</tr>
+<tr>
+<td><strong>SSP-SP</strong></td>
+<td>172.000 registros de ocorrências (filtrados para 10.777 após pré-processamento)</td>
+</tr>
+<tr>
+<td><strong>IBGE</strong></td>
+<td>Dados demográficos e socioeconômicos dos 645 municípios</td>
+</tr>
+<tr>
+<td><strong>SEFAZ-SP</strong></td>
+<td>Investimentos em segurança pública por município</td>
+</tr>
+</table>
+Variáveis Principais
+
+Temporais: data, hora, dia da semana, período do dia
+Geográficas: cidade, região, coordenadas
+Socioeconômicas: população, PIB per capita, renda média
+Segurança: investimentos, taxa de roubos por 1000 veículos
+Mobilidade: frota de automóveis, taxa de veículos por pessoa
+
+Aplicações Práticas
+
+Alocação de recursos - Direcionamento estratégico de efetivo policial
+Políticas públicas - Evidências para tomada de decisão
+Planejamento urbano - Identificação de áreas críticas
+Gestão de segurança - Otimização de investimentos por região
+
+Referências Principais
+
+Cohen, J. (1988). Statistical Power Analysis for the Behavioral Sciences
+Greenacre, M. J. (2017). Correspondence Analysis in Practice
+Géron, A. (2021). Hands-On Machine Learning with Scikit-Learn, Keras & TensorFlow
+Everitt, B. S. et al. (2011). Cluster Analysis
+
+Contribuições
+Contribuições são bem-vindas! Por favor, abra uma issue para discutir mudanças propostas ou envie um pull request.
+Contato
