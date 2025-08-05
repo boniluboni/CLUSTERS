@@ -43,18 +43,43 @@ Análise detalhada de cada cluster com estatísticas descritivas
 
 Principais Descobertas
 Padrões Temporais
-
-Horário de pico: 19h às 21h (concentração de 50% das ocorrências no período noturno)
-Dias críticos: Sextas-feiras (noite) e fins de semana (madrugada)
-Correlação horária: Aumento progressivo de ocorrências ao longo do dia
-
+<table>
+<tr>
+<td><strong>Horário de pico</strong></td>
+<td>19h às 21h (concentração de 50% das ocorrências no período noturno)</td>
+</tr>
+<tr>
+<td><strong>Dias críticos</strong></td>
+<td>Sextas-feiras (noite) e fins de semana (madrugada)</td>
+</tr>
+<tr>
+<td><strong>Correlação horária</strong></td>
+<td>Aumento progressivo de ocorrências ao longo do dia</td>
+</tr>
+</table>
 Segmentação Municipal (4 Clusters)
-
-Cluster 0: Municípios menores com baixa criminalidade e alta variabilidade
-Cluster 1: Centros urbanos densos com alta atividade econômica
-Cluster 2: Cidades de médio porte com altas taxas de roubo/furto
-Cluster 3: Regiões extensas com densidade populacional moderada
-
+<table>
+<tr>
+<th>Cluster</th>
+<th>Características</th>
+</tr>
+<tr>
+<td><strong>Cluster 0</strong></td>
+<td>Municípios menores com baixa criminalidade e alta variabilidade</td>
+</tr>
+<tr>
+<td><strong>Cluster 1</strong></td>
+<td>Centros urbanos densos com alta atividade econômica</td>
+</tr>
+<tr>
+<td><strong>Cluster 2</strong></td>
+<td>Cidades de médio porte com altas taxas de roubo/furto</td>
+</tr>
+<tr>
+<td><strong>Cluster 3</strong></td>
+<td>Regiões extensas com densidade populacional moderada</td>
+</tr>
+</table>
 Insights Socioeconômicos
 
 Correlação entre PIB per capita elevado e maiores taxas de criminalidade
@@ -65,40 +90,42 @@ Tecnologias Utilizadas
 Python 3.11.4
 Bibliotecas principais:
 
-pandas: Manipulação e análise de dados
-scikit-learn: K-Means, PCA, métricas de avaliação
-scipy: Testes estatísticos e correlações
-prince: Análise de correspondência (ANACOR)
-seaborn e matplotlib: Visualizações
-yellowbrick: Método do cotovelo
-numpy: Operações numéricas
+pandas - Manipulação e análise de dados
+scikit-learn - K-Means, PCA, métricas de avaliação
+scipy - Testes estatísticos e correlações
+prince - Análise de correspondência (ANACOR)
+seaborn e matplotlib - Visualizações
+yellowbrick - Método do cotovelo
+numpy - Operações numéricas
 
 
+analise-roubos-veiculos-sp/
+│
 ├── data/
-│   ├── raw/                    # Dados originais (SSP, IBGE, SEFAZ)
+│   ├── raw/                        # Dados originais (SSP, IBGE, SEFAZ)
 │   │   ├── ocorrencias_2021.csv
 │   │   ├── dados_ibge.csv
 │   │   └── investimentos_sefaz.csv
-│   └── processed/              # Dados processados e integrados
+│   └── processed/                  # Dados processados e integrados
 │       └── dataset_final.csv
 │
 ├── notebooks/
-│   ├── 01_preprocessing.ipynb  # Limpeza e integração dos dados
-│   ├── 02_eda.ipynb           # Análise exploratória completa
+│   ├── 01_preprocessing.ipynb      # Limpeza e integração dos dados
+│   ├── 02_eda.ipynb               # Análise exploratória completa
 │   ├── 03_statistical_tests.ipynb  # Spearman e ANACOR
-│   ├── 04_pca_analysis.ipynb  # Redução de dimensionalidade
-│   └── 05_clustering.ipynb    # K-Means e análise dos clusters
+│   ├── 04_pca_analysis.ipynb      # Redução de dimensionalidade
+│   └── 05_clustering.ipynb        # K-Means e análise dos clusters
 │
 ├── src/
-│   ├── data_processing.py     # Funções de pré-processamento
-│   ├── statistical_analysis.py # Implementação dos testes
-│   ├── clustering.py          # Pipeline do K-Means
-│   └── visualization.py       # Funções de visualização
+│   ├── data_processing.py         # Funções de pré-processamento
+│   ├── statistical_analysis.py    # Implementação dos testes
+│   ├── clustering.py              # Pipeline do K-Means
+│   └── visualization.py           # Funções de visualização
 │
 ├── results/
-│   ├── figures/               # Gráficos e visualizações
-│   └── reports/               # Relatórios detalhados
+│   ├── figures/                   # Gráficos e visualizações
+│   └── reports/                   # Relatórios detalhados
 │
-├── requirements.txt           # Dependências do projeto
-├── README.md                  # Este arquivo
-└── LICENSE                    # MIT License
+├── requirements.txt               # Dependências do projeto
+├── README.md                      # Este arquivo
+└── LICENSE                        # MIT License
